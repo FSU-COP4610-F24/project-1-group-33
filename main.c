@@ -69,17 +69,33 @@ void free_tokens(tokenlist *tokens) {
     free(tokens);
 }
 
-void execute_commands(tokenlist *tokens) {  //executes commands
+void execute_commands(tokenlist *tokens) {    //executes commands
     if (tokens->size == 0) {                //checks if tokenlist is empty
         return;
     }
-
-    if(strcmp(tokens->items[0], "echo") == 0) {     //handles the echo command
-        for (int i = 1; i < tokens->size; i++) {
-            printf("%s\n", tokens->items[i]);
+ 
+//    if(strcmp(tokens->items[0], "echo") == 0) {     //handles the echo command
+//        for (int i = 1; i < tokens->size; i++) {
+//            printf("%s\n", tokens->items[i]);   
+//        }
+//    }
+        search(&tokens->items[0]);              //searchs for path for command
+        int status;                             //
+        pid_t pid = fork();                     //creates process
+        
+        if (pid == 0){
+                execv(tokens->items[0], tokens->items); //replaces process with new command
+                perror("execv");                        //
+                exit(EXIT_FAILURE);                     //exit if fail
         }
-    }
+        else if(pid > 0){
+                waitpid(pid, &status, 0);               //wait for process to complete 
+        }
+        else{
+                perror("fork");                         //incase fork fails   
+        }
 }
+
 
 int main (){
 
