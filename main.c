@@ -105,6 +105,7 @@ int main (){
         tokenlist *tokens = get_tokens(input);
 
         for(int i = 0; i < tokens->size; i++) {
+            expand_tilde(&(tokens->items[i]));
             expand_variable(&(tokens->items[i]));
         }
         execute_commands(tokens);
