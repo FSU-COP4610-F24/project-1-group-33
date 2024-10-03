@@ -9,6 +9,8 @@
 #include "lever.h"
 #include "tilde.h"
 #include "path.h"
+#include "internal.h"
+
 
 char *get_input(void) {
     char *buffer = NULL;
@@ -77,6 +79,9 @@ void execute_commands(tokenlist *tokens) {    //executes commands
     if (tokens->size == 0) {                //checks if tokenlist is empty
         return;
     }
+        if(strcmp(tokens->items[0], "cd") == 0){
+                cd_command(tokens);
+        }
 
 //    if(strcmp(tokens->items[0], "echo") == 0) {     //handles the echo command
 //        for (int i = 1; i < tokens->size; i++) {
