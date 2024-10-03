@@ -26,3 +26,4 @@ void display_prompt(){
     printf("%s@%s:%s> ", user, machine, cwd);
 }
 
+
