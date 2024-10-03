@@ -83,6 +83,11 @@ void execute_commands(tokenlist *tokens) {    //executes commands
                 cd_command(tokens);
         }
 
+        if (tokens->size > 1){
+            if(strcmp(tokens->items[1], "<") == 0 | strcmp(tokens->items[1], ">") == 0){
+                printf("HEY");
+            }
+        }
 //    if(strcmp(tokens->items[0], "echo") == 0) {     //handles the echo command
 //        for (int i = 1; i < tokens->size; i++) {
 //            printf("%s\n", tokens->items[i]);
