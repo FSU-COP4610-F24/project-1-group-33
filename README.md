@@ -1,9 +1,9 @@
-# [Project Name]
+# Project 1 COP4610 (Shell)
 
 [Description]
 
 ## Group Members
-- **[Member]**: [School Email]
+- **Ian Spence**: ips22a@fsu.edu
 - **[Member]**: [School Email]
 - **[Member]**: [School Email]
 ## Division of Labor
