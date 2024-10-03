@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <fcntl.h>
-#include <limits.h>
+#include <fcntl.h>  
+#include <limits.h> 
 #include <stdbool.h>
 
 void search(char **token) {
-    char *p = getenv("PATH"); //gets entire PATH
+    char *p = getenv("PATH"); //gets entire PATH   
     if (p == NULL) {
         printf("PATH environment variable not found.\n");
         return;
@@ -15,10 +15,10 @@ void search(char **token) {
 
     p = strdup(p);              //Deep copy
 
-    bool pathExists = false;    //set to false until path is found
+    bool pathExists = false;    //set to false until path is found  
     char *dir = strtok(p, ":");  //seperates paths with ':'
 
-    while (dir != NULL) {
+    while (dir != NULL) {                               
         size_t len = strlen(dir) + strlen(*token) + 2;  //allocates space for path
         char *path = malloc(len);                       //where full path goes
 
@@ -28,7 +28,7 @@ void search(char **token) {
             snprintf(path, len, "%s%s", dir, *token);   //already has '/'
         }
 
-
+                                                
         if (open(path, O_RDONLY) >= 0) {        //checks to see if file exist and readable
             pathExists = true;                          //path is found
             free(*token);                       //free space
@@ -43,7 +43,8 @@ void search(char **token) {
     free(p);                                            //free space
 
     if (!pathExists) {                          //unable to find path
-        printf("Command Not Found\n");
+        printf("Command Not Found\n");  
         }
 }
+
 
