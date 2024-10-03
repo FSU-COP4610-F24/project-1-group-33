@@ -7,6 +7,8 @@
 #include "prompt.h"
 #include "Ev.h"
 #include "lever.h"
+#include "tilde.h"
+#include "path.h"
 
 char *get_input(void) {
     char *buffer = NULL;
@@ -75,26 +77,26 @@ void execute_commands(tokenlist *tokens) {    //executes commands
     if (tokens->size == 0) {                //checks if tokenlist is empty
         return;
     }
- 
+
 //    if(strcmp(tokens->items[0], "echo") == 0) {     //handles the echo command
 //        for (int i = 1; i < tokens->size; i++) {
-//            printf("%s\n", tokens->items[i]);   
+//            printf("%s\n", tokens->items[i]);
 //        }
 //    }
         search(&tokens->items[0]);              //searchs for path for command
         int status;                             //
         pid_t pid = fork();                     //creates process
-        
-        if (pid == 0){
+
+        if (pid == 0){                          
                 execv(tokens->items[0], tokens->items); //replaces process with new command
                 perror("execv");                        //
                 exit(EXIT_FAILURE);                     //exit if fail
         }
         else if(pid > 0){
-                waitpid(pid, &status, 0);               //wait for process to complete 
+                waitpid(pid, &status, 0);               //wait for process to complete
         }
         else{
-                perror("fork");                         //incase fork fails   
+                perror("fork");                         //incase fork fails
         }
 }
 
@@ -102,7 +104,7 @@ void execute_commands(tokenlist *tokens) {    //executes commands
 int main (){
 
     while(1){
-        display_prompt();           //displays current directory
+        display_prompt();
         char* input = get_input();
         tokenlist *tokens = get_tokens(input);
 
@@ -110,9 +112,11 @@ int main (){
             expand_tilde(&(tokens->items[i]));
             expand_variable(&(tokens->items[i]));
         }
+        
         execute_commands(tokens);
 
         free(input);
         free_tokens(tokens);
     }
 }
+
