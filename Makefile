@@ -2,7 +2,7 @@ TARGET = op
 CC = gcc
 CFLAGS = -g
 
-SRC = main.c prompt.c Ev.c tilde.c path.c
+SRC = main.c prompt.c Ev.c tilde.c path.c internal.c
 
 OBJS = $(SRC:.c=.o)
 
