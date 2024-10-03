@@ -4,13 +4,13 @@
 
 ## Group Members
 - **Ian Spence**: ips22a@fsu.edu
-- **[Member]**: [School Email]
+- **[Amisaday Santiago]**: [as21bj@fsu.edu]
 - **[Member]**: [School Email]
 ## Division of Labor
 
-### Part 1: [Description]
-- **Responsibilities**: [Description]
-- **Assigned to**: [Members]
+### Part 1: [Prompt]
+- **Responsibilities**: [Output prompt with the absolute working directory, user name, and the machine name]
+- **Assigned to**: [Amisaday, Ian]
 
 ### Part 2: [Description]
 - **Responsibilities**: [Description]
