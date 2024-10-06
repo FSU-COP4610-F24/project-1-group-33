@@ -1,11 +1,10 @@
 # Project 1 COP4610 (Shell)
 
-[Description]
 
 ## Group Members
-- **Ian Spence**: ips22a@fsu.edu
+- **[Ian Spence]**: [ips22a@fsu.edu]
 - **[Amisaday Santiago]**: [as21bj@fsu.edu]
-- **[Member]**: [School Email]
+- **[Austin Dennison]**: [amd23r@fsu.edu]
 ## Division of Labor
 
 ### Part 1: [Prompt]
@@ -35,30 +34,23 @@ root/
 ## How to Compile & Execute
 
 ### Requirements
-- **Compiler**: e.g., `gcc` for C/C++, `rustc` for Rust.
-- **Dependencies**: List any libraries or frameworks necessary (rust only).
+-gcc
 
 ### Compilation
-For a C/C++ example:
-```bash
+
 make
-```
-This will build the executable in ...
+
 ### Execution
-```bash
+
 make run
-```
+
 This will run the program ...
 
 ## Bugs
-- **Bug 1**: This is bug 1.
-- **Bug 2**: This is bug 2.
-- **Bug 3**: This is bug 3.
+
 
 ## Extra Credit
-- **Extra Credit 1:**: [Extra Credit Option]
-- **Extra Credit 2:**: [Extra Credit Option]
-- **Extra Credit 3:**: [Extra Credit Option]
+N/A
 
 ## Considerations
-[Description]
+
