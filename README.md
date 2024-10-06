@@ -42,9 +42,9 @@ make
 
 ### Execution
 
-make run
+op
 
-This will run the program ...
+This will run the program
 
 ## Bugs
 
