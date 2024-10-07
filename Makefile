@@ -1,4 +1,4 @@
-TARGET = op
+TARGET = shell
 CC = gcc
 CFLAGS = -g
 
