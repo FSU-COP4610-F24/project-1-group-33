@@ -50,11 +50,24 @@
 ## File Listing
 ```
 root/
-src/
-  main.c
-include/
-README.md
-Makefile
+  src/
+    Ev.c
+    internal.c
+    main.c
+    path.c
+    pipe.c
+    prompt.c
+    tilde.c
+  include/
+    Ev.h
+    internal.h
+    lever.h
+    path.h
+    pipe.h
+    prompt.h
+    tilde.h
+  README.md
+  Makefile
 ```
 ## How to Compile & Execute
 
