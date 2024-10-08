@@ -83,10 +83,10 @@ root/
 This will run the program
 
 ## Bugs
-
+Notifications for ending background processes sometimes come before OR after a main call, depending on runtimes.
 
 ## Extra Credit
 - **Extra Credit 1**: Support unlimited number of pipes [2]
 
 ## Considerations
-
+Ian Spence's Late Work
