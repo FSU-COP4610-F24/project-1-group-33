@@ -5,9 +5,11 @@
 #include <fcntl.h>  
 #include <limits.h> 
 #include <stdbool.h>
-#include "path.h"
+
+bool lastSuccess = 0;
 
 void search(char **token) {
+    char **tokenCopy = token;                               // Seeks out executables for calls, has inputSuccess attached parasitically, for the exit call.
     char *p = getenv("PATH"); //gets entire PATH   
     if (p == NULL) {
         printf("PATH environment variable not found.\n");
@@ -45,5 +47,17 @@ void search(char **token) {
 
     if (!pathExists) {                          //unable to find path
         printf("Command Not Found\n");  
+        lastSuccess = 0;
+        }
+    else
+        {
+        lastSuccess = 1;
         }
 }
+
+    int inputSuccess(){
+        if (lastSuccess == 1)
+            return 1;
+        else    
+            return 2;
+    }

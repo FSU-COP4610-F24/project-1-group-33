@@ -2,5 +2,6 @@
 #define PATH_H
 
 void search(char **token);
-
+int inputSuccess();
 #endif
+

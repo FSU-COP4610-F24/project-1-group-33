@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-typedef struct {
+typedef struct {                                //Some beginning of file starter code.
     char ** items;
     size_t size;
 } tokenlist;

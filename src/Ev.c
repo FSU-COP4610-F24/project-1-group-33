@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdio.h>
 
-void expand_variable(char **token) {
+void expand_variable(char **token) {            // Turns $USER into full name
     if((*token)[0] == '$') {
         char* envName = *token + 1;
         char* envValue = getenv(envName);
@@ -16,3 +16,4 @@ void expand_variable(char **token) {
         }
     }
 }
+

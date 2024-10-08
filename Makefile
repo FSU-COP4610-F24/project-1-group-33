@@ -1,8 +1,8 @@
-TARGET = shell
+TARGET = op
 CC = gcc
 CFLAGS = -g
 
-SRC = main.c prompt.c Ev.c tilde.c path.c internal.c lever.h pipe.c 
+SRC = main.c prompt.c Ev.c tilde.c path.c internal.c lever.h io.h pipe.c
 
 OBJS = $(SRC:.c=.o)
 
