@@ -1,3 +1,5 @@
+#pragma once
+
 #include "lever.h"
 tokenlist* io_request(tokenlist *tokens);
 
@@ -21,4 +23,4 @@ void io_initialize();
 
 tokenlist* io_cleanToken(tokenlist *tokens, int firstCaret);
 
-int initialized = 0;
+extern int initialized;

@@ -1,7 +1,4 @@
-#ifndef PATH_H
-#define PATH_H
+#pragma once
 
 void search(char **token);
 int inputSuccess();
-#endif
-

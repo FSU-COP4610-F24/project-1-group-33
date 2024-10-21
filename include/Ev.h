@@ -1,6 +1,3 @@
-#ifndef EV_H
-#define EV_H
+#pragma once
 
 void expand_variable(char **token);
-
-#endif

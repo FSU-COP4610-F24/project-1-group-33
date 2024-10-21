@@ -1,6 +1,4 @@
-#ifndef PROMPT_H
-#define PROMPT_H
+#pragma once
 
 void display_prompt();
 void blockPrompt();
-#endif
