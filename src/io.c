@@ -1,4 +1,3 @@
-#pragma once
 #include "io.h"
 #include <stdio.h>
 #include "fcntl.h"
@@ -12,6 +11,7 @@ int in2 = 0;
 int out = 0;
 int out2 = 0;
 bool inSuccess = 0;
+int initialized = 0;
 
 tokenlist* io_request(tokenlist *tokens){
 if (initialized == 0){

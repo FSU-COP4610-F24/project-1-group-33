@@ -4,6 +4,7 @@
 #include <limits.h>
 #include <string.h>
 #include <unistd.h>
+#include <linux/limits.h>
 
 int promptblock = 0; // Used by fork routing to display prompt at the proper time.
 

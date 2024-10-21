@@ -9,6 +9,7 @@ char* firstList;
 char* secondList;
 char* thirdList;
 int records = 0;
+struct process tenList[11];
 
     struct process forkJob(tokenlist *tokens){
     if (initializedFork == 0)

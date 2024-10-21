@@ -10,9 +10,9 @@
 #include "tilde.h"
 #include "path.h"
 #include "internal.h"
-#include "io.c"
+#include "io.h"
 #include "pipe.h"
-#include "background.c"
+#include "background.h"
 
 
 char *get_input(void) {                 
